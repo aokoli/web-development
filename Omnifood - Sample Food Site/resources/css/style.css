@@ -284,8 +284,12 @@ header {
     margin-top: 30px;
     
 }
-/*TODO: .steps-box:last-child isn't working below. Used nth-child for now*/
-.steps-box:nth-child(2) { 
+/* last-child is 'conditional'. In this case, it means select the element IF:  
+1. It is a .steps-box element 
+2. It is the last child of a parent (in this case .row?)
+This helped: https://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/
+*/
+.steps-box:last-child { 
     padding-left: 3%;
     margin-top: 70px;
 }
